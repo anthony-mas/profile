@@ -1,36 +1,48 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Anthony Massoud</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anthony Massoud — Profile</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-      crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card profile-card">
+      <img src="images/Photo.jpg" alt="Anthony Massoud" class="avatar" />
+      <h1 class="name">Anthony Massoud</h1>
+      <p class="subtitle">Hospitality Operations → Future Web Developer</p>
 
-    <link rel="stylesheet" href="style.css">
-  </head>
+      <p class="description">
+        Passionate about hospitality, technology, and clean design. After years improving guest journeys and leading hotel tech projects,
+        I’m now learning to build web apps that make operations simpler and more human. I love translating complexity into elegant,
+        user-friendly solutions.
+      </p>
 
-  <body>
-    <div class="container">
-      <div class="card">
-        <img src="images/Photo.jpg" alt="Anthony Massoud" class="avatar">
-        <h1>Hey, I’m Anthony 👋</h1>
-        <p>
-          Blending <strong>hospitality</strong> and <strong>tech</strong> to create smoother, more human experiences.<br>
-          Currently learning web development at <a href="https://www.lewagon.com/" target="_blank">Le Wagon Paris</a>.
-        </p>
+      <a class="btn btn-wagon" href="https://www.lewagon.com/paris" target="_blank" rel="noopener">
+        🚀 Discover Le&nbsp;Wagon
+      </a>
+    </section>
 
-        <ul class="socials">
-          <li><a href="https://github.com/anthony-mas" target="_blank"><i class="fab fa-github"></i></a></li>
-          <li><a href="https://x.com/AnthonyMassoudz" target="_blank"><i class="fab fa-twitter"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/anthony-massoud-a32790171/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-        </ul>
-      </div>
-    </div>
-  </body>
+    <section class="card social-card">
+      <h2 class="social-title">Connect with me 🌍</h2>
+      <nav class="social-grid">
+        <a class="social-link" href="https://github.com/anthony-mas" target="_blank" rel="noopener">💻 GitHub</a>
+        <a class="social-link" href="https://www.linkedin.com/in/anthony-massoud-a32790171/" target="_blank" rel="noopener">🔗 LinkedIn</a>
+        <a class="social-link" href="https://x.com/AnthonyMassoudz" target="_blank" rel="noopener">🗞️ X / Twitter</a>
+      </nav>
+    </section>
+
+    <footer class="footnote">
+      <small>Made with 💚 in Paris — © <span id="year"></span> Anthony Massoud</small>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>

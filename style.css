@@ -1,113 +1,139 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&family=Inter:wght@300;400;500&display=swap");
-
 body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
   background: #e6f4ea;
   color: #2e3a35;
-  font-family: 'Inter', sans-serif;
   text-align: center;
-  margin: 0;
-  padding: 60px 20px;
+  line-height: 1.6;
 }
 
-.container {
-  width: 900px;
-  margin: 0 auto;
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 60px 20px;
 }
 
 .card {
   background: #ffffff;
-  max-width: 420px;
-  margin: 0 auto;
+  border: 2px solid #b4e3c4;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   padding: 40px 30px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  margin: 20px auto;
+  max-width: 480px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 2px solid #b4e3c4; /* minty border */
 }
 
 .card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
 }
 
 .avatar {
-  width: 100px;
+  width: 110px;
   border-radius: 50%;
-  margin-bottom: 20px;
-  filter: grayscale(10%);
   border: 3px solid #a6dfb7;
+  margin-bottom: 20px;
 }
 
-h1 {
-  font-family: 'Space Grotesk', sans-serif;
+.name {
+  color: #4dbb91;
   font-size: 26px;
-  color: #50b58f;
-  margin-bottom: 12px;
+  margin: 10px 0 5px;
 }
 
-p {
+.subtitle {
   font-size: 15px;
-  line-height: 1.6;
+  color: #62776d;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 15px;
+  color: #333;
   margin-bottom: 25px;
+  line-height: 1.7;
 }
 
-a {
-  color: #50b58f;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #ff8fa3;
-}
-
-.socials {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.socials li {
+.btn {
   display: inline-block;
-  margin: 0 10px;
+  background-color: #4dbb91;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.socials i {
-  font-size: 28px;
-  color: #50b58f;
-  transition: color 0.3s ease, transform 0.3s ease;
+.btn:hover {
+  background-color: #ff8fa3;
+  transform: scale(1.05);
 }
 
-.socials i:hover {
+.social-title {
+  color: #4dbb91;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.social-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.social-link {
+  background-color: #f0faf4;
+  color: #4dbb91;
+  border: 1.5px solid #b4e3c4;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: #ffebef;
   color: #ff8fa3;
-  transform: scale(1.1);
+  transform: translateY(-2px);
+}
+
+.footnote {
+  margin-top: 30px;
+  font-size: 13px;
+  color: #5f6f66;
 }
 
 @media (max-width: 960px) {
-  .container { width: 700px; }
-  .card { padding: 36px 28px; }
-  h1 { font-size: 24px; }
-  .avatar { width: 96px; }
+  .card {
+    padding: 36px 26px;
+    max-width: 400px;
+  }
+  .name { font-size: 24px; }
 }
 
 @media (max-width: 720px) {
-  .container { width: 500px; }
-  body { padding: 40px 16px; }
-  .card { padding: 32px 24px; border-radius: 14px; }
-  h1 { font-size: 22px; }
-  p { font-size: 14px; }
-  .avatar { width: 88px; }
-  .socials i { font-size: 24px; }
+  .card {
+    padding: 30px 24px;
+    border-radius: 14px;
+  }
+  .avatar { width: 95px; }
+  .name { font-size: 22px; }
+  .description { font-size: 14px; }
 }
 
 @media (max-width: 540px) {
-  .container { width: 300px; }
-  .card { padding: 26px 20px; border-radius: 12px; }
-  h1 { font-size: 20px; margin-bottom: 10px; }
-  p { font-size: 13px; line-height: 1.5; }
-  .avatar { width: 76px; }
-  .socials li { margin: 0 6px; }
-  .socials i { font-size: 22px; }
+  .card {
+    padding: 24px 20px;
+    border-radius: 12px;
+    max-width: 320px;
+  }
+  .avatar { width: 80px; }
+  .name { font-size: 20px; }
+  .social-grid { flex-direction: column; gap: 10px; }
 }
