@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&family=Inter:wght@300;400;500&display=swap");
+
+body {
+  background: #e6f4ea;
+  color: #2e3a35;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 60px 20px;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.card {
+  background: #ffffff;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #b4e3c4; /* minty border */
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+}
+
+.avatar {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  filter: grayscale(10%);
+  border: 3px solid #a6dfb7;
+}
+
+h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 26px;
+  color: #50b58f;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+a {
+  color: #50b58f;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ff8fa3;
+}
+
+.socials {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.socials li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.socials i {
+  font-size: 28px;
+  color: #50b58f;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socials i:hover {
+  color: #ff8fa3;
+  transform: scale(1.1);
+}
+
+@media (max-width: 960px) {
+  .container { width: 700px; }
+  .card { padding: 36px 28px; }
+  h1 { font-size: 24px; }
+  .avatar { width: 96px; }
+}
+
+@media (max-width: 720px) {
+  .container { width: 500px; }
+  body { padding: 40px 16px; }
+  .card { padding: 32px 24px; border-radius: 14px; }
+  h1 { font-size: 22px; }
+  p { font-size: 14px; }
+  .avatar { width: 88px; }
+  .socials i { font-size: 24px; }
+}
+
+@media (max-width: 540px) {
+  .container { width: 300px; }
+  .card { padding: 26px 20px; border-radius: 12px; }
+  h1 { font-size: 20px; margin-bottom: 10px; }
+  p { font-size: 13px; line-height: 1.5; }
+  .avatar { width: 76px; }
+  .socials li { margin: 0 6px; }
+  .socials i { font-size: 22px; }
+}
